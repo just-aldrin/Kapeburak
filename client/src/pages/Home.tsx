@@ -52,6 +52,25 @@ const categories: { label: Category; detail: string }[] = [
   { label: "Goods", detail: "Carry the feeling" },
 ];
 
+const productImageById: Record<string, string> = {
+  "spanish-latte": "/assets/spanish-latte.webp",
+  "tultul-latte": "/assets/spanish-latte.webp",
+  "liberica-cloud": "/assets/liberica-cloud.webp",
+  "ube-cruffin": "/assets/cruffin.webp",
+  "cold-steep": "/assets/bottled-brew.webp",
+  "atok-honey": "/assets/bottled-brew.webp",
+  "field-notes-tumbler": "/assets/liberica-cloud.webp",
+  "panaderia-toast": "/assets/cruffin.webp",
+};
+
+const productImageByCategory: Record<Exclude<Category, "All">, string> = {
+  Coffee: "/assets/spanish-latte.webp",
+  Pastry: "/assets/cruffin.webp",
+  Bottled: "/assets/bottled-brew.webp",
+  Pantry: "/assets/bottled-brew.webp",
+  Goods: "/assets/liberica-cloud.webp",
+};
+
 const money = (value: number) => `₱${value.toLocaleString("en-PH", { minimumFractionDigits: 2 })}`;
 
 export default function Home() {
@@ -112,9 +131,12 @@ export default function Home() {
         price: row.price_centavos / 100,
         description: row.description,
         note: row.note,
-        image: row.image_path
-          ? client.storage.from("product-images").getPublicUrl(row.image_path).data.publicUrl
-          : null,
+        image:
+          (row.image_path
+            ? client.storage.from("product-images").getPublicUrl(row.image_path).data.publicUrl
+            : null) ??
+          productImageById[row.id] ??
+          productImageByCategory[row.category as Exclude<Category, "All">],
         featured: row.featured,
         options: row.options,
       }));
@@ -279,8 +301,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="KAPEBURAK home">
-          <span className="wordmark-main">KAPEBURAK</span>
-          <span className="wordmark-sub">neighborhood roastery</span>
+          <img src="/assets/kapeburak-logo.png" alt="KAPEBURAK" />
         </a>
         <button className="mobile-menu-button" onClick={() => setMobileNavOpen(!mobileNavOpen)} aria-label="Toggle navigation" aria-expanded={mobileNavOpen}>
           {mobileNavOpen ? <X size={20} /> : <Menu size={20} />}
@@ -306,7 +327,7 @@ export default function Home() {
             <div className="hero-asides"><div><span className="aside-number">100%</span><span>Philippine<br />origins</span></div><div><span className="aside-number">1,650m</span><span>highest farm<br />elevation</span></div><div><span className="aside-number">18h</span><span>cold<br />steep</span></div></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-wrap"><ProductImage src={featuredProduct?.image ?? null} alt="Kapeburak coffee" className="hero-artwork" /><div className="hero-stamp"><span>✦</span><span>slow<br />pour<br />club</span></div></div>
+            <div className="hero-image-wrap"><ProductImage src="/assets/hero-coffee.webp" alt="Kapeburak coffee" className="hero-artwork" /><div className="hero-stamp"><span>✦</span><span>slow<br />pour<br />club</span></div></div>
             <div className="hero-caption"><div><span className="caption-label">The corner in Iloilo</span><strong>Good coffee. No rush.</strong></div><span className="caption-hours">7am — 10pm<br />Mon — Sun</span></div>
           </div>
         </section>
