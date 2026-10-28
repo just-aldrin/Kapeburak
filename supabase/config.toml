@@ -1,0 +1,4 @@
+project_id = "kapeburak"
+
+[functions.create-order]
+verify_jwt = false

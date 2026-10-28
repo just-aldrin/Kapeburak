@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 
 :root { --ink: #2b211b; --muted: #74685e; --paper: #f7f1e8; --cream: #fffaf2; --line: #e5dbcf; --clay: #be6d40; --clay-dark: #9d5230; --olive: #5b7257; --maroon: #5a2823; --radius: 16px; }
+.image-placeholder { display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #f7f1e8, #d8c6b1); color: var(--clay-dark); }.image-placeholder svg { opacity: .7; }.hero-artwork { width: 100%; aspect-ratio: 1.05; }.signature-image .image-placeholder { width: 100%; aspect-ratio: 1.25; }.product-image .image-placeholder { width: 100%; aspect-ratio: .92; transition: transform .5s ease; }.product-image-button:hover .image-placeholder { transform: scale(1.045); }.modal-image .image-placeholder { width: 100%; height: 100%; min-height: 440px; }.cart-line .image-placeholder { width: 60px; height: 60px; }.callout-placeholder { display: grid; place-items: center; width: 43%; aspect-ratio: 1; border-radius: 50%; background: #c6d3c3; color: var(--olive); }.order-error { margin: 0; color: #a42e25; font-size: 12px; text-align: center; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 15px; }
