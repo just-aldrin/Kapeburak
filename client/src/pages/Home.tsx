@@ -54,21 +54,13 @@ const categories: { label: Category; detail: string }[] = [
 
 const productImageById: Record<string, string> = {
   "spanish-latte": "/assets/spanish-latte.webp",
-  "tultul-latte": "/assets/spanish-latte.webp",
+  "tultul-latte": "/assets/tultul-latte.svg",
   "liberica-cloud": "/assets/liberica-cloud.webp",
   "ube-cruffin": "/assets/cruffin.webp",
   "cold-steep": "/assets/bottled-brew.webp",
-  "atok-honey": "/assets/bottled-brew.webp",
-  "field-notes-tumbler": "/assets/liberica-cloud.webp",
-  "panaderia-toast": "/assets/cruffin.webp",
-};
-
-const productImageByCategory: Record<Exclude<Category, "All">, string> = {
-  Coffee: "/assets/spanish-latte.webp",
-  Pastry: "/assets/cruffin.webp",
-  Bottled: "/assets/bottled-brew.webp",
-  Pantry: "/assets/bottled-brew.webp",
-  Goods: "/assets/liberica-cloud.webp",
+  "atok-honey": "/assets/atok-honey-beans.svg",
+  "field-notes-tumbler": "/assets/field-notes-tumbler.svg",
+  "panaderia-toast": "/assets/panaderia-toast.svg",
 };
 
 const money = (value: number) => `₱${value.toLocaleString("en-PH", { minimumFractionDigits: 2 })}`;
@@ -136,7 +128,7 @@ export default function Home() {
             ? client.storage.from("product-images").getPublicUrl(row.image_path).data.publicUrl
             : null) ??
           productImageById[row.id] ??
-          productImageByCategory[row.category as Exclude<Category, "All">],
+          null,
         featured: row.featured,
         options: row.options,
       }));

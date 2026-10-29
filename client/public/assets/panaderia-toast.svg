@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" fill="none">
+  <rect width="640" height="520" rx="8" fill="#E9D8C4"/>
+  <circle cx="468" cy="118" r="92" fill="#F2E8DA"/>
+  <ellipse cx="320" cy="369" rx="205" ry="59" fill="#D4B89A"/>
+  <ellipse cx="320" cy="350" rx="194" ry="49" fill="#FFF9EF"/>
+  <path d="M194 321c0-25 20-45 45-45h162c25 0 45 20 45 45v34c0 25-20 45-45 45H239c-25 0-45-20-45-45v-34Z" fill="#B76B3F"/>
+  <path d="M213 318c0-15 12-27 27-27h160c15 0 27 12 27 27v25c0 15-12 27-27 27H240c-15 0-27-12-27-27v-25Z" fill="#E3AE6A"/>
+  <path d="M237 310h166v47H237z" fill="#F4D797"/>
+  <path d="m266 307 18 49m25-49 18 49m25-49 18 49" stroke="#C88948" stroke-width="5" stroke-linecap="round"/>
+  <path d="m290 286 12 6m35-8 12 6m-65 76 12 6m69-5 12 6" stroke="#FFF0C3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M452 247c-18 29-27 42-27 57a28 28 0 0 0 56 0c0-15-10-28-29-57Z" fill="#D9A441"/>
+  <path d="M437 304c2-9 8-14 16-17" stroke="#FFF1C9" stroke-width="5" stroke-linecap="round"/>
+  <text x="320" y="475" fill="#5A2823" font-family="Georgia,serif" font-size="17" letter-spacing="4" text-anchor="middle">PANADERIA MORNING TOAST</text>
+</svg>

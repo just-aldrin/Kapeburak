@@ -13,7 +13,7 @@ A responsive coffee-shop storefront for KAPEBURAK in Iloilo City. The catalog, p
    supabase db push
    ```
 
-   The migration creates and seeds the `products` table, creates private `orders` and `order_items` tables, enables row-level security, and creates the public `product-images` storage bucket.
+   The migrations create and seed the `products` table, create private `orders` and `order_items` tables, enable row-level security, and create the public `product-images` storage bucket. The catalog seed migration also fills in any of the default menu items missing from an existing database.
 3. Deploy the public guest-order function:
 
    ```bash
@@ -47,7 +47,7 @@ Redeploy after setting or changing environment variables. The Supabase Edge Func
 
 ## Products, images, and orders
 
-The migration seeds the eight current menu items. Manage prices and availability in Supabase's `products` table; prices are stored as integer Philippine centavos. To add an image, upload it to the `product-images` storage bucket and set the matching `products.image_path` to its bucket-relative path. Image files are not included in this repository yet; products display a placeholder until an image is uploaded.
+The catalog seed migration adds eight menu items across coffee, pastry, bottled drinks, pantry, and goods. They can be added to the bag and submitted as guest orders. Manage prices and availability in Supabase's `products` table; prices are stored as integer Philippine centavos. To add an image, upload it to the `product-images` storage bucket and set the matching `products.image_path` to its bucket-relative path. The current menu uses the storefront's bundled product images when no storage image is set.
 
 Guest checkout saves the customer's details, selected products/options, authoritative database prices, fulfillment choice, and order totals in Supabase. Review orders in the Supabase `orders` and `order_items` tables. Order inserts are only allowed through the Edge Function and a database function using the service-role key; browser clients cannot read order/customer data or write prices. Payment status remains pending and no payment is collected online. PayMongo integration is not included yet. Before accepting production traffic, add an anti-abuse control such as CAPTCHA and rate limiting to the public order endpoint.
 

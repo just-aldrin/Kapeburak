@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" fill="none">
+  <rect width="640" height="520" rx="8" fill="#E9D8C4"/>
+  <circle cx="473" cy="133" r="100" fill="#F2E8DA"/>
+  <path d="M211 130h194l-24 286c-2 22-20 39-42 39h-63c-22 0-40-17-42-39l-23-286Z" fill="#A76042"/>
+  <path d="m198 111 221 1-10 42H209l-11-43Z" fill="#5A2823"/>
+  <path d="M226 156h164" stroke="#D99C71" stroke-width="5"/>
+  <path d="M232 183h150l-18 214H250l-18-214Z" fill="#BD7351"/>
+  <path d="M257 264c22-21 47-21 70 0 17 16 34 17 52 5" stroke="#F0D8BE" stroke-width="3"/>
+  <text x="307" y="301" fill="#FFF5E7" font-family="Georgia,serif" font-size="29" letter-spacing="5" text-anchor="middle">KB</text>
+  <path d="M458 324c-33 10-47 35-43 75m43-75c33 10 47 35 43 75m-43-42v56m-27-43 27 24m27-24-27 24" stroke="#5B7257" stroke-width="4" stroke-linecap="round"/>
+  <text x="320" y="484" fill="#5A2823" font-family="Georgia,serif" font-size="17" letter-spacing="4" text-anchor="middle">FIELD NOTES · 12 OZ</text>
+</svg>
