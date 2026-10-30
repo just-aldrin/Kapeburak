@@ -184,7 +184,7 @@ export default function Home() {
       if (sort === "Price high") return right.price - left.price;
       return Number(Boolean(right.featured)) - Number(Boolean(left.featured));
     });
-  }, [category, query, sort]);
+  }, [products, category, query, sort]);
 
   const cartCount = cart.reduce((total, line) => total + line.quantity, 0);
   const subtotal = cart.reduce((total, line) => total + line.price * line.quantity, 0);
