@@ -343,7 +343,7 @@ export default function Home() {
         </section>
 
         <section className="ritual-section section-pad" id="story">
-          <div className="ritual-visual"><div className="ritual-orbit orbit-one" /><div className="ritual-orbit orbit-two" /><div className="ritual-cup"><Coffee size={68} strokeWidth={1.1} /><span>slow<br />rituals</span></div><span className="ritual-label label-top">From the highlands</span><span className="ritual-label label-bottom">to your everyday</span></div>
+          <div className="ritual-visual"><div className="ritual-orbit orbit-one" /><div className="ritual-orbit orbit-two" /><div className="ritual-cup"><Coffee className="ritual-coffee-icon" size={68} strokeWidth={1.1} /><span>slow<br />rituals</span></div><span className="ritual-label label-top">From the highlands</span><span className="ritual-label label-bottom">to your everyday</span></div>
           <div className="ritual-copy"><p className="eyebrow"><Leaf size={15} /> Handcrafted with pride</p><h2>A little more<br /><em>meaning</em> in every cup.</h2><p>We founded KAPEBURAK to honor the slow, proud coffee heritage of Iloilo, Bukidnon, and Batangas — translating volcanic soul and highland rituals into everyday experiences.</p><div className="origin-list"><div><span>01</span><strong>Traceable origins</strong><p>Beans with a story worth telling.</p></div><div><span>02</span><strong>Small-batch roasting</strong><p>Freshness you can taste.</p></div><div><span>03</span><strong>Made to linger</strong><p>A neighborhood, not a pit stop.</p></div></div><button className="text-link" onClick={() => scrollTo("visit")}>Meet us at the corner <ArrowUpRight size={15} /></button></div>
         </section>
 
