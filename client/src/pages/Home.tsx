@@ -18,7 +18,6 @@ import {
   Plus,
   Search,
   ShoppingBag,
-  Sparkles,
   Star,
   Truck,
   X,
@@ -289,7 +288,7 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <div className="announcement"><Sparkles size={14} /> <span>Today’s slow notes: <strong>Atok Honeydark Muscovado</strong></span><span className="announcement-spacer" /><span>Free pickup in Iloilo on orders over ₱500</span></div>
+      <div className="announcement"><Coffee size={14} /> <span>Today’s slow notes: <strong>Atok Honeydark Muscovado</strong></span><span className="announcement-spacer" /><span>Free pickup in Iloilo on orders over ₱500</span></div>
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="KAPEBURAK home">
@@ -319,7 +318,7 @@ export default function Home() {
             <div className="hero-asides"><div><span className="aside-number">100%</span><span>Philippine<br />origins</span></div><div><span className="aside-number">1,650m</span><span>highest farm<br />elevation</span></div><div><span className="aside-number">18h</span><span>cold<br />steep</span></div></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-wrap"><ProductImage src="/assets/hero-coffee.webp" alt="Kapeburak coffee" className="hero-artwork" /><div className="hero-stamp"><span>✦</span><span>slow<br />pour<br />club</span></div></div>
+            <div className="hero-image-wrap"><ProductImage src="/assets/hero-coffee.webp" alt="Kapeburak coffee" className="hero-artwork" /><div className="hero-stamp"><span><Coffee size={18} strokeWidth={1.5} /></span><span>slow<br />pour<br />club</span></div></div>
             <div className="hero-caption"><div><span className="caption-label">The corner in Iloilo</span><strong>Good coffee. No rush.</strong></div><span className="caption-hours">7am — 10pm<br />Mon — Sun</span></div>
           </div>
         </section>
@@ -350,7 +349,7 @@ export default function Home() {
 
         <section className="split-callouts section-pad"><button className="callout-card callout-bottles" onClick={() => { setCategory("Bottled"); scrollTo("menu"); }}><div><p className="eyebrow">For the fridge</p><h3>Keep cafe-grade<br /><em>brews</em> at home.</h3><span className="text-link">Shop bottled <ArrowRight size={15} /></span></div>{bottledProduct?.image ? <img src={bottledProduct.image} alt={bottledProduct.name} /> : <div className="callout-placeholder"><Coffee size={44} /></div>}</button><button className="callout-card callout-goods" onClick={() => { setCategory("Goods"); scrollTo("menu"); }}><div><p className="eyebrow">For the ritual</p><h3>Carry a little<br /><em>comfort.</em></h3><span className="text-link">View collection <ArrowRight size={15} /></span></div><div className="goods-graphic"><ShoppingBag size={64} strokeWidth={1} /><span>KB</span></div></button></section>
 
-        <section className="visit section-pad" id="visit"><div className="visit-card"><div className="visit-copy"><p className="eyebrow"><MapPin size={15} /> Your neighborhood sanctuary</p><h2>Come as you are.<br /><em>Stay awhile.</em></h2><p>Step in for an unhurried morning pour-over, quiet workspace seating, and high-speed Wi-Fi. We’re happy to serve coffee with comfort.</p><div className="address"><strong>College of Management (CM) Bldg.</strong><span>University of the Philippines Visayas</span><span>MHW4+W24, Iloilo City, Iloilo</span></div><div className="visit-actions"><button className="button button-dark" onClick={() => window.open("https://maps.google.com/?q=University+of+the+Philippines+Visayas+College+of+Management", "_blank")}>Get directions <ExternalLink size={15} /></button><a className="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">@kapeburak <Instagram size={15} /></a></div></div><div className="hours-card"><span className="hours-label">Open daily</span><strong>7:00 AM<br /><em>—</em> 10:00 PM</strong><span className="hours-note"><Clock3 size={14} /> Walk-ins welcome</span><div className="hours-mark">✦</div></div></div></section>
+        <section className="visit section-pad" id="visit"><div className="visit-card"><div className="visit-copy"><p className="eyebrow"><MapPin size={15} /> Your neighborhood sanctuary</p><h2>Come as you are.<br /><em>Stay awhile.</em></h2><p>Step in for an unhurried morning pour-over, quiet workspace seating, and high-speed Wi-Fi. We’re happy to serve coffee with comfort.</p><div className="address"><strong>College of Management (CM) Bldg.</strong><span>University of the Philippines Visayas</span><span>MHW4+W24, Iloilo City, Iloilo</span></div><div className="visit-actions"><button className="button button-dark" onClick={() => window.open("https://maps.google.com/?q=University+of+the+Philippines+Visayas+College+of+Management", "_blank")}>Get directions <ExternalLink size={15} /></button><a className="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">@kapeburak <Instagram size={15} /></a></div></div><div className="hours-card"><span className="hours-label">Open daily</span><strong>7:00 AM<br /><em>—</em> 10:00 PM</strong><span className="hours-note"><Clock3 size={14} /> Walk-ins welcome</span><div className="hours-mark"><Coffee size={24} strokeWidth={1.5} /></div></div></div></section>
       </main>
 
       <footer className="site-footer"><div className="footer-brand"><span className="wordmark-main">KAPEBURAK</span><span>Philippine coffee, everyday.</span></div><div className="footer-links"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Visit</a><a href="mailto:hello@kapeburak.com">Say hello</a></div><div className="footer-legal">© 2026 KAPEBURAK<br />Made slowly in Iloilo City</div></footer>
